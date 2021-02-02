@@ -1,0 +1,228 @@
+1.
+// Abstract Classes //
+using System;
+
+public abstract class Customer
+{
+    public abstract void Print();
+    public void Print2()
+    {
+        Console.WriteLine("Technovert");
+    }
+}
+
+    
+
+public class Program:Customer
+{
+    public override void Print()
+    {
+        Console.WriteLine("Abstract class Example");
+    }
+    
+    public static void Main()
+    {
+        Customer C = new Program();
+        C.Print();
+        C.Print2();
+    }
+}
+
+
+2.
+// INTERFACES //
+using System;
+
+interface ICustomer
+{
+    void Print();
+}
+
+interface ICustomer2
+{
+    void Print2();
+}
+class Customer : ICustomer, ICustomer2
+{
+    public void Print()
+    {
+        Console.WriteLine("Interface Example");
+    }
+    public void Print2()
+    {
+        Console.WriteLine("Hello Rishabh");
+    }
+}
+public class Program
+{
+    public static void Main()
+    {
+        Customer C1 = new Customer();
+        C1.Print();
+        C1.Print2();
+    }
+}
+
+
+
+3.
+// Explicit Interface Implementation to manage Interface Ambuiguity //
+using System;
+
+interface ICustomer
+{
+    void Print();
+}
+
+interface ICustomer2
+{
+    void Print();
+}
+
+public class Program:ICustomer,ICustomer2
+{
+    void ICustomer.Print()
+    {
+        Console.WriteLine("Interface Example");
+    }
+    void ICustomer2.Print()
+    {
+        Console.WriteLine("Hello Rishabh");
+    }
+    public static void Main()
+    {
+        Program P = new Program();
+        ((ICustomer)P).Print();
+        ((ICustomer2)P).Print();
+    }
+}
+
+
+4.
+// SINGLE INTERFACE//
+using System;
+
+interface ICustomer
+{
+    void Print();
+}
+
+class Customer : ICustomer
+{
+    public void Print()
+    {
+        Console.WriteLine("Interface Example");
+    }
+}
+public class Program
+{
+    public static void Main()
+    {
+        Customer C1 = new Customer();
+        C1.Print();
+    }
+}
+
+
+5.
+// DNS.GetHostName //
+using System;
+using System.Net;
+
+namespace MyHostName
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var hostName = Dns.GetHostName();
+            Console.WriteLine($"Hostname: {hostName}");
+        }
+    }
+}
+
+
+6.
+//Single Catch for multiple exceptions using Exception Filters//
+using System;
+using System.IO;
+namespace ExceptionHandling
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            try
+            {
+                StreamReader sr = new StreamReader("/Users/apple/Desktop/Data1.txt");
+                Console.WriteLine(sr.ReadToEnd());
+                sr.Close();
+              
+            }
+            catch(Exception ex) when(ex is ArgumentException||ex is FileNotFoundException)
+            {
+                Console.WriteLine("Please check, there is an error");
+            }
+        }
+    }
+}
+
+
+7.
+// Single Catch for multiple exceptions using If-Else//
+using System;
+using System.IO;
+namespace ExceptionHandling
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            try
+            {
+                StreamReader sr = new StreamReader("/Users/apple/Desktop/Data1.txt");
+                Console.WriteLine(sr.ReadToEnd());
+                sr.Close();
+              
+            }
+            catch(Exception ex) 
+            {
+                if (ex is FileNotFoundException)
+                    Console.WriteLine("FileNotFound Exception");
+                else if (ex is ArithmeticException)
+                    Console.WriteLine("Arithmetic Exception");
+                else
+                    Console.WriteLine("Please check, there is an error");
+            }
+        }
+    }
+}
+
+using System;
+using System.IO;
+namespace ExceptionHandling
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            try
+            {
+                int a = 0, b = 10;
+                int c = b / a;
+                Console.WriteLine(c);
+              
+              
+            }
+            catch(Exception ex) 
+            {
+                if (ex is FileNotFoundException)
+                    Console.WriteLine("FileNotFound");
+                else if (ex is ArithmeticException)
+                    Console.WriteLine("Arithmetic Exception");
+                else
+                    Console.WriteLine("Please check, there is an error");
+            }
+        }
+    }
+}
