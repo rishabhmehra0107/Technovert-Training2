@@ -226,3 +226,194 @@ namespace ExceptionHandling
         }
     }
 }
+
+8.
+// Multiple inheritance using Interfaces //
+
+using System;
+namespace MultipleInheritance
+{
+    interface I1
+    {
+        void First();
+    }
+    class A : I1
+    {
+        public void First()
+        {
+            Console.WriteLine("A");
+        }
+    }
+    interface I2
+    {
+        void Second();
+    }
+    class B : I2
+    {
+        public void Second()
+        {
+            Console.WriteLine("B");
+        }
+    }
+
+    class AB : I1, I2
+    {
+        A a = new A();
+        B b = new B();
+        public void First()
+        {
+            a.First();
+        }
+        public void Second()
+        {
+            b.Second();
+        }
+    }
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            AB ab = new AB();
+            ab.First();
+            ab.Second();
+        }
+    }
+}
+
+
+
+9.
+// Delegates //
+
+using System;
+public delegate void TechnovertTraining(string Message);
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        TechnovertTraining tt = new TechnovertTraining(Training);
+        tt("Welcome to Technovert");
+    }
+
+    public static void Training(string str)
+    {
+        Console.WriteLine(str);
+    }
+}
+
+
+10.
+// without delegate vs with delegate //
+
+.... Without.....
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        List<Employee> emplist = new List<Employee>();
+        emplist.Add(new Employee() { ID = 1, Salary = 5000, Experience=5 });
+        emplist.Add(new Employee() { ID = 2, Salary = 3000, Experience = 3 });
+        emplist.Add(new Employee() { ID = 3, Salary = 2000, Experience = 2 });
+        emplist.Add(new Employee() { ID = 4, Salary = 6000, Experience = 6 });
+        Employee.Promote(emplist);
+
+    }
+}
+class Employee
+{
+    public int ID { get; set; }
+    public int Salary { get; set; }
+    public int Experience { get; set; }
+
+   public static void Promote(List<Employee> emplt)
+    {
+        foreach(Employee emp in emplt)
+        {
+            if(emp.Experience>=5)
+            Console.WriteLine(emp.ID);
+        }
+    }
+
+}
+
+...With Delegate & Lambda Expressions code improved...
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        List<Employee> emplist = new List<Employee>();
+        emplist.Add(new Employee() { ID = 1, Salary = 5000, Experience = 5 });
+        emplist.Add(new Employee() { ID = 2, Salary = 3000, Experience = 3 });
+        emplist.Add(new Employee() { ID = 3, Salary = 2000, Experience = 2 });
+        emplist.Add(new Employee() { ID = 4, Salary = 6000, Experience = 6 });
+        Employee.Promote(emplist, emplo=>emplo.Experience>=5);
+
+    }
+}
+delegate bool Ispromote(Employee emp1);
+class Employee
+{
+    public int ID { get; set; }
+    public int Salary { get; set; }
+    public int Experience { get; set; }
+
+    public static void Promote(List<Employee> emplt, Ispromote pro)
+    {
+        foreach (Employee emp in emplt)
+        {
+            if (pro(emp))
+                Console.WriteLine(emp.ID);
+        }
+    }
+
+}
+
+
+11.
+// Aggregation (Has-a Relationship) //
+using System;
+public class Marks
+{
+    public string subject;
+    public int score;
+
+    public Marks(string subject,int score)
+    {
+        this.subject = subject;
+        this.score = score;
+    }
+}
+public class Student
+{
+    public string name;
+    public int id;
+    public Marks marks;
+
+    public Student(string name, int id, Marks marks)
+    {
+        this.name = name;
+        this.id = id;
+        this.marks = marks;
+    }
+    public void display()
+    {
+        Console.WriteLine(id + " " + name + " " + marks.subject + " " + marks.score);
+    }
+}
+public class TestAggregation
+{
+    public static void Main(string[] args)
+    {
+        Marks m = new Marks("Maths", 98);
+        Student s = new Student("Rishabh", 1, m);
+        s.display();
+    }
+}
