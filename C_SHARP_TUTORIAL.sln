@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promotion_Application_with_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aggregation_Has-a-Relationship", "Aggregation_Has-a-Relationship\Aggregation_Has-a-Relationship.csproj", "{CA3953A0-1806-444E-9679-0DDB1C82751A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics1", "Generics1\Generics1.csproj", "{964C4BCE-6EE2-45A4-B2E7-FD4245EDE4AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics_Function_Overloading", "Generics_Function_Overloading\Generics_Function_Overloading.csproj", "{42C54616-C1F1-4E05-B155-B85663F990D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -93,6 +97,14 @@ Global
 		{CA3953A0-1806-444E-9679-0DDB1C82751A}.Debug|anycpu.Build.0 = Debug|anycpu
 		{CA3953A0-1806-444E-9679-0DDB1C82751A}.Release|anycpu.ActiveCfg = Release|anycpu
 		{CA3953A0-1806-444E-9679-0DDB1C82751A}.Release|anycpu.Build.0 = Release|anycpu
+		{964C4BCE-6EE2-45A4-B2E7-FD4245EDE4AB}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{964C4BCE-6EE2-45A4-B2E7-FD4245EDE4AB}.Debug|anycpu.Build.0 = Debug|anycpu
+		{964C4BCE-6EE2-45A4-B2E7-FD4245EDE4AB}.Release|anycpu.ActiveCfg = Release|anycpu
+		{964C4BCE-6EE2-45A4-B2E7-FD4245EDE4AB}.Release|anycpu.Build.0 = Release|anycpu
+		{42C54616-C1F1-4E05-B155-B85663F990D7}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{42C54616-C1F1-4E05-B155-B85663F990D7}.Debug|anycpu.Build.0 = Debug|anycpu
+		{42C54616-C1F1-4E05-B155-B85663F990D7}.Release|anycpu.ActiveCfg = Release|anycpu
+		{42C54616-C1F1-4E05-B155-B85663F990D7}.Release|anycpu.Build.0 = Release|anycpu
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
