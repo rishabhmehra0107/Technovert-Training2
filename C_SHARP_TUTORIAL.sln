@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics1", "Generics1\Gene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics_Function_Overloading", "Generics_Function_Overloading\Generics_Function_Overloading.csproj", "{42C54616-C1F1-4E05-B155-B85663F990D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic_Delegates", "Generic_Delegates\Generic_Delegates.csproj", "{99CD3D74-210B-4E7E-B63C-A2C4ACC00502}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -105,6 +107,10 @@ Global
 		{42C54616-C1F1-4E05-B155-B85663F990D7}.Debug|anycpu.Build.0 = Debug|anycpu
 		{42C54616-C1F1-4E05-B155-B85663F990D7}.Release|anycpu.ActiveCfg = Release|anycpu
 		{42C54616-C1F1-4E05-B155-B85663F990D7}.Release|anycpu.Build.0 = Release|anycpu
+		{99CD3D74-210B-4E7E-B63C-A2C4ACC00502}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{99CD3D74-210B-4E7E-B63C-A2C4ACC00502}.Debug|anycpu.Build.0 = Debug|anycpu
+		{99CD3D74-210B-4E7E-B63C-A2C4ACC00502}.Release|anycpu.ActiveCfg = Release|anycpu
+		{99CD3D74-210B-4E7E-B63C-A2C4ACC00502}.Release|anycpu.Build.0 = Release|anycpu
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
