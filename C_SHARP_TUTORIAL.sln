@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic_Delegates", "Generi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxingUnboxing", "BoxingUnboxing\BoxingUnboxing.csproj", "{EFFFF22B-FBE4-4E37-8C60-83D0056DADE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankTask", "BankTask\BankTask.csproj", "{E246208B-1EF6-475F-B5B3-DD279559FF68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -117,6 +119,10 @@ Global
 		{EFFFF22B-FBE4-4E37-8C60-83D0056DADE1}.Debug|anycpu.Build.0 = Debug|anycpu
 		{EFFFF22B-FBE4-4E37-8C60-83D0056DADE1}.Release|anycpu.ActiveCfg = Release|anycpu
 		{EFFFF22B-FBE4-4E37-8C60-83D0056DADE1}.Release|anycpu.Build.0 = Release|anycpu
+		{E246208B-1EF6-475F-B5B3-DD279559FF68}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{E246208B-1EF6-475F-B5B3-DD279559FF68}.Debug|anycpu.Build.0 = Debug|anycpu
+		{E246208B-1EF6-475F-B5B3-DD279559FF68}.Release|anycpu.ActiveCfg = Release|anycpu
+		{E246208B-1EF6-475F-B5B3-DD279559FF68}.Release|anycpu.Build.0 = Release|anycpu
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
